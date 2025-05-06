@@ -1,0 +1,95 @@
+{
+  "markov_chain": {
+    "states": ["Twitter", "Facebook", "Instagram", "WhatsApp", "TikTok"],
+    "transition_matrix": [
+      [0.3, 0.3, 0.2, 0.1, 0.1],
+      [0.2, 0.2, 0.3, 0.2, 0.1],
+      [0.1, 0.2, 0.4, 0.2, 0.1],
+      [0.1, 0.1, 0.2, 0.5, 0.1],
+      [0.2, 0.1, 0.1, 0.1, 0.5]
+    ]
+  },
+  "hidden_markov_model": {
+    "hidden_states": ["True", "Partially_True", "Fake"],
+    "observation_symbols": ["Low_Engagement", "Medium_Engagement", "High_Engagement", "Viral"],
+    "transition_matrix": [
+      [0.7, 0.2, 0.1],
+      [0.3, 0.4, 0.3],
+      [0.1, 0.3, 0.6]
+    ],
+    "emission_matrix": [
+      [0.6, 0.3, 0.1, 0.0],
+      [0.2, 0.4, 0.3, 0.1],
+      [0.1, 0.2, 0.3, 0.4]
+    ],
+    "initial_probabilities": [0.5, 0.3, 0.2],
+    "observations": [0, 1, 1, 2, 3, 3, 2, 1, 0]
+  },
+  "mm1_queue": {
+    "arrival_rate": 5.0,
+    "service_rate": 6.0,
+    "time_points": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  "post_data": [
+    {
+      "id": 1,
+      "content": "Breaking: Scientists discover new vaccine with 100% effectiveness!",
+      "platform": "Twitter",
+      "timestamp": "2023-05-01T10:00:00Z",
+      "engagement": {
+        "likes": 1200,
+        "shares": 3500,
+        "comments": 450
+      },
+      "credibility_score": 0.2
+    },
+    {
+      "id": 2,
+      "content": "Government announces nationwide lockdown starting tomorrow",
+      "platform": "Facebook",
+      "timestamp": "2023-05-02T14:30:00Z",
+      "engagement": {
+        "likes": 5600,
+        "shares": 8900,
+        "comments": 2300
+      },
+      "credibility_score": 0.4
+    },
+    {
+      "id": 3,
+      "content": "Celebrity reveals secret cure for all diseases",
+      "platform": "Instagram",
+      "timestamp": "2023-05-03T09:15:00Z",
+      "engagement": {
+        "likes": 12000,
+        "shares": 6700,
+        "comments": 3400
+      },
+      "credibility_score": 0.1
+    },
+    {
+      "id": 4,
+      "content": "Study shows drinking water cures cancer",
+      "platform": "WhatsApp",
+      "timestamp": "2023-05-04T16:45:00Z",
+      "engagement": {
+        "likes": 0,
+        "shares": 15000,
+        "comments": 0
+      },
+      "credibility_score": 0.05
+    },
+    {
+      "id": 5,
+      "content": "Major bank collapse imminent, withdraw your money now",
+      "platform": "TikTok",
+      "timestamp": "2023-05-05T11:20:00Z",
+      "engagement": {
+        "likes": 45000,
+        "shares": 23000,
+        "comments": 8900
+      },
+      "credibility_score": 0.15
+    }
+  ]
+}

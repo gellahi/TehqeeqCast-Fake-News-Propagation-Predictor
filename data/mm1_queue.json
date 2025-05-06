@@ -1,0 +1,42 @@
+{
+  "arrival_rate": 5.0,
+  "service_rate": 6.0,
+  "time_points": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "description": "This M/M/1 queue models the content moderation pipeline for fact-checking. The arrival rate represents how quickly posts are flagged for review, and the service rate represents how quickly moderators can process them.",
+  "metadata": {
+    "source": "TehqeeqCast Sample Data",
+    "created": "2023-05-05",
+    "version": "1.0"
+  },
+  "scenarios": [
+    {
+      "name": "Normal Operation",
+      "arrival_rate": 5.0,
+      "service_rate": 6.0,
+      "description": "Standard operation with manageable queue length"
+    },
+    {
+      "name": "Viral Misinformation Event",
+      "arrival_rate": 8.0,
+      "service_rate": 6.0,
+      "description": "High volume of flagged content exceeding processing capacity"
+    },
+    {
+      "name": "Enhanced Moderation Team",
+      "arrival_rate": 5.0,
+      "service_rate": 8.0,
+      "description": "Increased moderation capacity for faster processing"
+    },
+    {
+      "name": "Critical Overload",
+      "arrival_rate": 10.0,
+      "service_rate": 6.0,
+      "description": "System at risk of becoming unstable with rapidly growing backlog"
+    }
+  ],
+  "simulation_parameters": {
+    "simulation_time": 24,
+    "time_unit": "hours",
+    "warm_up_period": 2
+  }
+}

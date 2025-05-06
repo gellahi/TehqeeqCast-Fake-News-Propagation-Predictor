@@ -1,0 +1,36 @@
+{
+  "hidden_states": ["True", "Partially_True", "Fake"],
+  "observation_symbols": ["Low_Engagement", "Medium_Engagement", "High_Engagement", "Viral"],
+  "transition_matrix": [
+    [0.7, 0.2, 0.1],
+    [0.3, 0.4, 0.3],
+    [0.1, 0.3, 0.6]
+  ],
+  "emission_matrix": [
+    [0.6, 0.3, 0.1, 0.0],
+    [0.2, 0.4, 0.3, 0.1],
+    [0.1, 0.2, 0.3, 0.4]
+  ],
+  "initial_probabilities": [0.5, 0.3, 0.2],
+  "observations": [0, 1, 1, 2, 3, 3, 2, 1, 0],
+  "description": "This Hidden Markov Model represents the evolution of a post's credibility over time. The hidden states are the true credibility levels (True, Partially True, Fake), while the observations are the engagement metrics that can be seen publicly.",
+  "metadata": {
+    "source": "TehqeeqCast Sample Data",
+    "created": "2023-05-05",
+    "version": "1.0"
+  },
+  "examples": [
+    {
+      "post_id": 1,
+      "content": "Breaking: Scientists discover new vaccine with 100% effectiveness!",
+      "observation_sequence": [0, 1, 2, 3, 3, 2],
+      "observation_description": ["Low initial engagement", "Medium engagement as it spreads", "High engagement as it gains traction", "Viral spread", "Viral spread continues", "Engagement decreases as fact-checkers respond"]
+    },
+    {
+      "post_id": 2,
+      "content": "Government announces nationwide lockdown starting tomorrow",
+      "observation_sequence": [1, 2, 3, 3, 2, 1, 0],
+      "observation_description": ["Medium initial engagement", "High engagement as people react", "Viral spread due to urgency", "Viral spread continues", "Engagement decreases as official sources respond", "Medium engagement with corrections", "Low engagement as the news cycle moves on"]
+    }
+  ]
+}

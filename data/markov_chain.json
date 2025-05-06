@@ -1,0 +1,33 @@
+{
+  "transition_matrix": [
+    [0.3, 0.3, 0.2, 0.1, 0.1],
+    [0.2, 0.2, 0.3, 0.2, 0.1],
+    [0.1, 0.2, 0.4, 0.2, 0.1],
+    [0.1, 0.1, 0.2, 0.5, 0.1],
+    [0.2, 0.1, 0.1, 0.1, 0.5]
+  ],
+  "states": ["Twitter", "Facebook", "Instagram", "WhatsApp", "TikTok"],
+  "description": "This Markov chain models how fake news propagates across different social media platforms. Each state represents a platform, and the transition probabilities indicate the likelihood of content moving from one platform to another in a single step.",
+  "metadata": {
+    "source": "TehqeeqCast Sample Data",
+    "created": "2023-05-05",
+    "version": "1.0"
+  },
+  "examples": [
+    {
+      "initial_platform": "Twitter",
+      "content": "Breaking: Scientists discover new vaccine with 100% effectiveness!",
+      "credibility_score": 0.2
+    },
+    {
+      "initial_platform": "Facebook",
+      "content": "Government announces nationwide lockdown starting tomorrow",
+      "credibility_score": 0.4
+    },
+    {
+      "initial_platform": "TikTok",
+      "content": "Celebrity reveals secret cure for all diseases",
+      "credibility_score": 0.1
+    }
+  ]
+}
